@@ -3,7 +3,7 @@
 import os
 import requests
 
-with open("api_key.txt", "r") as f:
+with open("api_key", "r") as f:
   api_key = f.read()
 
 print(api_key)
@@ -11,10 +11,10 @@ print(api_key)
 # main chat loop
 
 interests = input("Enter some interests: ")
-chatlog = f"You are now chatting with a random stranger.\nYou both like {interests}.\n"
+chatlog = f"You are now chatting with a Elsayed.\nYou both like {interests}.\n"
 
 while True:
-  os.system("cls")
+  os.system("clear")
   print(chatlog)
 
   message = input(">")
@@ -32,7 +32,7 @@ while True:
       "prompt": prompt,
       "temperature": 1.2,
       "max_tokens": 64,
-      "stop": "\n",
+      # "stop": "\n",
     },
   )
   r = response.json()

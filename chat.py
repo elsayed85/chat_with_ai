@@ -1,6 +1,7 @@
 import argparse
 import json
 import os
+import openai
 
 class Chat():
   def __init__(self, prompt=None):
@@ -49,7 +50,7 @@ if __name__ == "__main__":
 
   done = False
   while not done:
-    os.system("cls")
+    os.system("clear")
     print(chat.log)
 
     message = input(">")
